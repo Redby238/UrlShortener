@@ -1,0 +1,23 @@
+﻿@model List<ShortUrlModel>
+
+<table>
+    <thead>
+        <tr>
+            <th>Original URL</th>
+            <th>Short URL</th>
+            <th>Created At</th>
+            <th>Clicks</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var shortUrl in Model)
+        {
+            <tr>
+                <td>@shortUrl.OriginalUrl</td>
+                <td>@shortUrl.ShortUrl</td>
+                <td>@shortUrl.CreatedAt.ToString("yyyy-MM-dd HH:mm:ss")</td>
+                <td>@shortUrl.Clicks</td>
+            </tr>
+        }
+    </tbody>
+</table>
